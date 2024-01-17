@@ -1,4 +1,12 @@
+import FiltersDisplay from "../components/FiltersDisplay";
+import ProductsDisplay from "../components/ProductsDisplay";
+
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <div className="max-w-screen-xl mx-auto px-5 md:px-10 py-10 flex">
+      <FiltersDisplay />
+      <ProductsDisplay />
+    </div>
+  );
 };
 export default Home;

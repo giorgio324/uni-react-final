@@ -2,7 +2,7 @@ import { IoCart } from "react-icons/io5";
 import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
-    <nav className="w-full py-4 bg-white border-b border-b-gray-800 fixed top-0 z-50">
+    <nav className="w-full py-4 bg-white border-b border-b-gray-800 sticky top-0 z-50">
       <div className="max-w-screen-xl h-full mx-auto flex items-center justify-between px-5 md:px-10">
         <h1 className="font-bold font-tiltPrism text-2xl md:text-3xl">
           <Link to="/">FAKE SHOP</Link>

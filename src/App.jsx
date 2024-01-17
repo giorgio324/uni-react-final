@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import RootLayout from "./layouts/RootLayout";
 import Cart from "./pages/Cart";
 import Home from "./pages/Home";
+import Error from "./pages/Error";
 const App = () => {
   return (
     <Router>
@@ -10,9 +11,8 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="product/:id" element={<>product</>} />
           <Route path="cart" element={<Cart />} />
-          {/* More child routes can be added here */}
+          <Route path="*" element={<Error />} />
         </Route>
-        {/* Additional routes can go here */}
       </Routes>
     </Router>
   );
