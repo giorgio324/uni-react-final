@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import AddToCartButton from "../components/AddToCartButton";
+import { useCartContext } from "../context/CartContext";
 
 const Product = () => {
   const { id } = useParams();
+  const { handleAddToCart } = useCartContext();
   const [product, setProduct] = useState();
   const [amount, setAmount] = useState(1);
+
   useEffect(() => {
     const getSingleProduct = async (id) => {
       const response = await fetch(`http://localhost:3000/products/${id}`);
@@ -34,11 +37,23 @@ const Product = () => {
 
           <div className="flex flex-col w-[180px] gap-4">
             <div className="flex justify-between items-center">
-              <button className="p-2 px-4 border">+</button>
+              <button
+                className="p-2 px-4 border"
+                onClick={() => setAmount(amount + 1)}
+              >
+                +
+              </button>
               <p>{amount}</p>
-              <button className="p-2 px-4 border">-</button>
+              <button
+                className="p-2 px-4 border"
+                onClick={() => {
+                  if (amount > 1) setAmount(amount - 1);
+                }}
+              >
+                -
+              </button>
             </div>
-            <AddToCartButton onClick={() => console.log("sd")}>
+            <AddToCartButton onClick={() => handleAddToCart(product, amount)}>
               Add To Cart
             </AddToCartButton>
           </div>

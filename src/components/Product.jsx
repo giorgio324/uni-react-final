@@ -1,10 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import AddToCartButton from "./AddToCartButton";
+import { useCartContext } from "../context/CartContext";
 const Product = ({ product }) => {
+  const { cartItems, setCartItems, handleAddToCart } = useCartContext();
   const navigate = useNavigate();
-  const handleAddToCart = (e) => {
-    e.stopPropagation();
-  };
   return (
     <div
       className="group flex border mb-4"
@@ -28,7 +27,12 @@ const Product = ({ product }) => {
         </div>
 
         <div className="flex w-full">
-          <AddToCartButton onClick={(e) => e.stopPropagation()}>
+          <AddToCartButton
+            onClick={(e) => {
+              e.stopPropagation();
+              handleAddToCart(product);
+            }}
+          >
             Add To Cart
           </AddToCartButton>
         </div>
