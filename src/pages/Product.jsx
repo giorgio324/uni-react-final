@@ -2,21 +2,20 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import AddToCartButton from "../components/AddToCartButton";
 import { useCartContext } from "../context/CartContext";
+import useFetch from "../hooks/useFetch";
 
 const Product = () => {
   const { id } = useParams();
   const { handleAddToCart } = useCartContext();
-  const [product, setProduct] = useState();
   const [amount, setAmount] = useState(1);
-
-  useEffect(() => {
-    const getSingleProduct = async (id) => {
-      const response = await fetch(`http://localhost:3000/products/${id}`);
-      const data = await response.json();
-      setProduct(data);
-    };
-    getSingleProduct(id);
-  }, []);
+  const { data: product, isLoading } = useFetch(`/products/${id}`);
+  if (isLoading) {
+    return (
+      <div className="max-w-screen-xl min-h-screen mx-auto px-10 flex flex-col justify-start gap-10">
+        <p className="font-bold text-xl">Loading...</p>
+      </div>
+    );
+  }
   return (
     <div className="max-w-screen-xl min-h-screen mx-auto px-10 flex flex-col justify-center gap-10">
       <div className="border flex items-center justify-center">

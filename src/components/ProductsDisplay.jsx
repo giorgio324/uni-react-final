@@ -1,16 +1,15 @@
-import { useEffect, useState } from "react";
 import Product from "./Product";
+import useFetch from "../hooks/useFetch";
 
 const ProductsDisplay = () => {
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    const getAllProducts = async () => {
-      const response = await fetch("http://localhost:3000/products");
-      const data = await response.json();
-      setProducts(data);
-    };
-    getAllProducts();
-  }, []);
+  const { data: products, isLoading } = useFetch("/products");
+  if (isLoading) {
+    return (
+      <div className="flex-1 px-5 md:px-10">
+        <h1 className="font-bold text-xl">Loading...</h1>
+      </div>
+    );
+  }
   return (
     <div className="flex-1 px-5 md:px-10">
       {products?.map((product) => {
