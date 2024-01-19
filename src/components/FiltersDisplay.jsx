@@ -35,6 +35,7 @@ const FiltersDisplay = () => {
         />
       </label>
       <div className="flex flex-col">
+        <p className="text-lg font-semibold mb-2">Categories</p>
         {categories?.categoryList.map((categorie, index) => {
           return (
             <label key={index} className="flex gap-4 text-base font-semibold">

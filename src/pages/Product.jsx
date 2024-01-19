@@ -24,10 +24,10 @@ const Product = () => {
           alt={product?.title}
           className="p-4 h-[250px] w-[250px] md:h-[350px] md:w-[350px] object-contain"
         />
-        <div className="w-full px-8 py-4 flex gap-4 items-end">
+        <div className="w-full px-8 py-4 flex gap-4 items-center">
           <div className="w-full flex flex-col gap-y-1 flex-1">
             <h2 className="font-bold text-xl">{product?.title}</h2>
-            <p className="font-bold">Price: ${product?.price}</p>
+            <p className="font-bold">Price: ${product?.price?.toFixed(2)}</p>
             <p className="text-xs text-gray-500">
               Category: {product?.category || "Other"}
             </p>
