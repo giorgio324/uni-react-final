@@ -45,7 +45,7 @@ const FiltersDisplay = () => {
                 value={categorie}
                 onChange={handleCategoryChange}
               />
-              {categorie}
+              <p className="capitalize">{categorie}</p>
             </label>
           );
         })}
