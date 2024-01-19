@@ -10,7 +10,7 @@ const ProductsDisplay = () => {
       </div>
     );
   }
-  if (filteredProducts.length === 0) {
+  if (filteredProducts?.length === 0) {
     return (
       <div className="flex-1 px-5 md:px-10 flex justify-center items-center">
         <h1 className="font-semibold text-xl">
