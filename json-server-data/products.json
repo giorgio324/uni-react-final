@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 1,
-      "title": "chair-1",
+      "title": "Wooden Chair",
       "price": 20,
       "category": "furniture",
       "description": "Chair-1 desc",
@@ -10,7 +10,7 @@
     },
     {
       "id": 2,
-      "title": "chair-2",
+      "title": "Office Soft Chair",
       "price": 22,
       "category": "furniture",
       "description": "Chair-2 desc",
@@ -18,7 +18,7 @@
     },
     {
       "id": 3,
-      "title": "chair-3",
+      "title": "Office Working Chair",
       "price": 24,
       "category": "furniture",
       "description": "Chair-1 desc",
@@ -26,11 +26,14 @@
     },
     {
       "id": 4,
-      "title": "chair-4",
+      "title": "Home Comfy Chair",
       "price": 26,
       "category": "furniture",
       "description": "Chair-2 desc",
       "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3Q2sy6mS9pTVCJIXrIC882kWYiB788cOwzQ&usqp=CAU"
     }
-  ]
+  ],
+  "categories": {
+    "categoryList": ["furniture", "clothes"]
+  }
 }
