@@ -55,9 +55,25 @@
       "category": "clothes",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, perferendis? Natus eaque doloribus ex ducimus fuga quam odio molestias earum officia , ",
       "imgUrl": "https://cdn-images.farfetch-contents.com/17/36/37/74/17363774_36025026_600.jpg"
+    },
+    {
+      "id": 8,
+      "title": "SAMSUNG 68.6 cm (27 inch) Full HD IPS Panel LCD Bezel-Less Monitor with Flicker-Free Technology",
+      "price": 140,
+      "category": "electronics",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, perferendis? Natus eaque doloribus ex ducimus fuga quam odio molestias earum officia , ",
+      "imgUrl": "https://media.croma.com/image/upload/v1697624059/Croma%20Assets/Computers%20Peripherals/Monitor/Images/260610_5_mjtpaq.png"
+    },
+    {
+      "id": 9,
+      "title": "ALIENWARE WIRED GAMING MOUSE - AW320M",
+      "price": 40,
+      "category": "electronics",
+      "description": "Speed, comfort and firepower never lack on a slimmed-down, wired gaming mouse with 19,000 native DPI and tracking of up to 400 inches per second.",
+      "imgUrl": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/peripherals/alienware/peripherals/alienware-320m-mouse/assets/mouse-alienware-aw320m-black-gallery-5.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=564&qlt=100,1&resMode=sharp2&size=564,402&chrss=full"
     }
   ],
   "categories": {
-    "categoryList": ["furniture", "clothes"]
+    "categoryList": ["furniture", "clothes", "electronics"]
   }
 }

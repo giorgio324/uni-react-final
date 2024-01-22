@@ -38,7 +38,7 @@ const CartItem = ({ cartItem }) => {
         <BsTrash className="text-2xl" />
       </button>
       <img src={cartItem?.imgUrl} alt={cartItem?.title} className="h-32 w-32" />
-      <h1 className="font-semibold text-lg">{cartItem?.title}</h1>
+      <h1 className="font-semibold text-lg w-[400px]">{cartItem?.title}</h1>
       <p>${cartItem?.price.toFixed(2)}</p>
       <div className="flex items-center gap-4">
         <button
